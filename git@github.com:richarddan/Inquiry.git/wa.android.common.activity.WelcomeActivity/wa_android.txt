@@ -1,0 +1,12 @@
+keystore:	wa_android.keystore
+password:	waandroid
+
+alias:		wadev
+password:	waandroid
+
+first and last name:		wa android
+organizational unit:		yonyou software
+organization			company
+city or locality:		Beijing
+state or province:		Beijing
+country code:			86

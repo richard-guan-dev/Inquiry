@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/mainboard_item_imgBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+	    android:layout_centerInParent="true"
+	    android:gravity="center"
+        android:padding="@dimen/padding_medium"
+		android:background="@drawable/ic_launcher" />
+	<TextView 
+        android:id="@+id/mainboard_item_titleTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/mainboard_item_imgBtn"
+	    android:layout_centerHorizontal="true"
+	    android:text="描述"
+	    />
+	<RelativeLayout
+	    android:id="@+id/mainboard_item_tipContainer"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="#886622"
+	    android:layout_alignTop="@id/mainboard_item_imgBtn"
+	    android:layout_alignRight="@id/mainboard_item_imgBtn"
+	    >
+	    <TextView 
+	    	android:id="@+id/mainboard_item_tipNumTextView"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#FFFFFF"
+		    android:layout_centerInParent="true"
+		    android:gravity="center"
+		    android:text="1"
+	        />
+	    
+	</RelativeLayout>
+</RelativeLayout>

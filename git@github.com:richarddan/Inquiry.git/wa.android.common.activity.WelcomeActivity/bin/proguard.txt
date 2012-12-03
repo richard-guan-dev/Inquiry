@@ -1,0 +1,51 @@
+# view AndroidManifest.xml #generated:78
+-keep class com.android.settings.WirelessSettings { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class wa.android.common.App { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class wa.android.common.activity.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class wa.android.common.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class wa.android.common.activity.LogoutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class wa.android.common.activity.MainBoardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class wa.android.common.activity.SetConnectionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class wa.android.common.activity.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class wa.android.common.activity.WelcomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:107
+-keep class wa.android.common.service.WAResidentService { <init>(...); }
+
+# view res/layout/activity_message_main.xml #generated:11
+-keep class wa.android.common.view.WADetailView { <init>(...); }
+
+# view AndroidManifest.xml #generated:88
+-keep class wa.android.inquire.activity.Attention { <init>(...); }
+
+# view AndroidManifest.xml #generated:103
+-keep class wa.android.inquire.activity.Detail { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class wa.android.inquire.activity.History { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class wa.android.inquire.activity.Main { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class wa.android.inquire.activity.Search { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
+-keep class wa.android.message.activity.MessageMainActivity { <init>(...); }
+
