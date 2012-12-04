@@ -67,6 +67,7 @@ public class SQLiteUtilHistoryHelper extends SQLiteOpenHelper {
 				new String[] { "id", "name" }, null, null, null,
 				null, "rank");
 		List<MaterialVO> materialVOs = new ArrayList<MaterialVO>();
+		
 		if(cursor.moveToFirst() == false)
 			return materialVOs;
 			
