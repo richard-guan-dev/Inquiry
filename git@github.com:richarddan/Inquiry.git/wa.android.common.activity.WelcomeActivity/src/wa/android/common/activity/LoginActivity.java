@@ -117,6 +117,9 @@ public class LoginActivity extends BaseActivity {
 					writePreference(WAPreferences.USER_PASS, usrPassEditText.getText().toString());
 				}
 				//if (hasAccountSet) {
+				if(usrNameEditText.getText().toString().equals("") || usrPassEditText.getText().toString().equals(""))
+					toastMsg("用户名或密码不能为空");
+				else
 					login();
 			//	} else {
 			//		toastMsg("请选择一个账套");
