@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" 
+    android:background="#E6E6E6">
+	
+    <RelativeLayout
+        android:id="@+id/main_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/common_title_bg" >
+        
+        <TextView
+            android:text="可用量查询"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+        
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/attention"
+       	android:layout_below="@id/main_title"
+       	android:layout_marginTop="100dp"
+        android:text="@string/attention"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/common_button_green_bg_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button 
+        android:id="@+id/sort"
+        android:text="@string/search_text"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/common_button_green_bg_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attention" />
+
+    <Button
+        android:id="@+id/history"
+           android:gravity="center"
+        android:padding="@dimen/padding_medium"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="30dp"
+         android:background="@drawable/common_button_green_bg_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sort"
+        android:text="@string/history"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+</RelativeLayout>

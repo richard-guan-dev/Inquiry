@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+        <RelativeLayout
+        android:id="@+id/history_title"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/common_title_bg" >
+        
+        <Button 
+            android:id="@+id/go_home4" 
+            android:layout_centerVertical="true"          
+            android:background="@drawable/salary_detail_title_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="物料详情"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        
+        <Button
+            android:id="@+id/setting"           
+            android:background="@drawable/salary_detail_bottom_btn_set_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+    
+    
+
+
+
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:stretchColumns="1">
+
+<TableRow 
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent">
+ 
+ <ImageButton 
+     android:id="@+id/detail_mattered_sign"
+     android:src="@drawable/ic_launcher"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:gravity="center_vertical"
+     android:visibility="invisible"/> 
+ 
+    
+    
+    <TextView 
+     android:text="2012年11月17日"
+     android:textSize="20dp"
+     android:layout_width="wrap_content"
+     android:layout_height="fill_parent"
+     android:gravity="center"/>
+ 
+ <ImageButton 
+     android:id="@+id/detail_pick_date"
+     android:src="@drawable/salary_detail_title_btn_select"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="right"/>
+        
+        
+        </TableRow>
+   
+   </TableLayout>   
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="20dp">
+
+<ListView
+    android:id="@+id/ListView2"
+    android:layout_width="fill_parent"
+    android:layout_height="154dp"
+    android:background="@drawable/window_border" />
+
+
+</LinearLayout>
+
+</LinearLayout>

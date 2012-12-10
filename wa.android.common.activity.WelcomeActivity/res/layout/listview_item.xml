@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+        <ImageView android:id="@+id/imageView"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:layout_centerVertical="true"  
+        android:layout_marginTop="-2dp"
+        android:layout_marginLeft="5dp"  
+        android:layout_marginRight="5dp"  
+        android:src="@drawable/wadetail_row_email"  />  
+     
+    <TextView
+        android:id="@+id/material_code"
+        android:layout_width="wrap_content"
+        android:text="物料代码"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+    
+    <TextView
+        android:id="@+id/matetial_name"
+        android:text="物料名称"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/gotodetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"  
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/wadetail_row_array" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/search_title"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/common_title_bg" >
+         
+        <TextView 
+            android:text="搜索物料"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        
+        <Button
+            android:id="@+id/go_back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/salary_detail_title_btn_back"
+		    android:contentDescription="@string/app_name"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        
+    </RelativeLayout>
+    
+	<Button 
+	    android:id="@+id/search_button"
+	    android:text="@string/search"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/search_title"
+	    android:layout_alignParentRight="true" />
+	
+	<EditText
+	    android:id="@+id/search_context"
+	    android:hint="物料编码、物料名称"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/search_title"
+	    android:layout_alignBottom="@id/search_button"
+	    android:layout_toLeftOf="@id/search_button" />
+	
+	<ListView
+	    android:layout_below="@id/search_button"
+	    android:id="@+id/search_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+	    
+	</ListView>
+	
+</RelativeLayout>
