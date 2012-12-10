@@ -7,11 +7,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import nc.vo.pub.BusinessException;
 import nc.vo.wa.component.available.AvailableInfoVO;
 import nc.vo.wa.component.available.MaterialVO;
 import nc.vo.wa.component.available.OrgnaTpNum;
 import nc.vo.wa.component.struct.Action;
 import nc.vo.wa.component.struct.Actions;
+import nc.vo.wa.component.struct.ItemVO;
 import nc.vo.wa.component.struct.ParamTagVO;
 import nc.vo.wa.component.struct.ReqParamsVO;
 import nc.vo.wa.component.struct.WAComponentInstanceVO;
@@ -49,12 +51,12 @@ public class AvailabilityDetailActivity extends BaseActivity implements OnScroll
 	// 定义一个静态变量i,放在绑定在Button storeup的监听器里面起到记数作用。
 	static int i = 1;
 
-	private void getInfo(int invid, String qdate){
+	private void getInfo(String invid, String qdate){
 
 		// 这个是从Search传过来的invid，别忘了赋值。
 	    //invid = 020101;
 		// 请求invid的资料
-		
+		invid = "020101";
 		final ProgressDialog dialog = new ProgressDialog(AvailabilityDetailActivity.this);
 		dialog.setTitle("物料查询");
 		dialog.setMessage("正在查询...");
@@ -78,8 +80,8 @@ public class AvailabilityDetailActivity extends BaseActivity implements OnScroll
 		params.add(new ParamTagVO("usrid", userId));
 		params.add(new ParamTagVO("invid", String.valueOf(invid)));
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		params.add(new ParamTagVO("qrydate", qdate));
-		
+//		params.add(new ParamTagVO("qrydate", qdate));
+		params.add(new ParamTagVO("qrydate", df.format(new Date())));
 		paramVO.setParamlist(params);
 		action.setParamstags(paramVO);
 		actionList.add(action);
@@ -102,10 +104,10 @@ public class AvailabilityDetailActivity extends BaseActivity implements OnScroll
 						if (flag == 0) {
 							//这里是成功验证后返回的数据
 							AvailableInfoVO availableInfoVO =  (AvailableInfoVO) action.getResresulttags().getServcieCodesRes().getScres().get(0).getResdata().getList().get(0);
-							//availableInfoVO.getAttributesMap().get(key); availableInfoVO 里面的信息用上面的方法去获取
-
+							//这里有个Bug，我们需要一个public的接口去从AvailableInfoVO得到OrgnaTpNum。OrgnaTpNum中封装了Detail直接调用方法就可以了；
+							OrgnaTpNum orgnatpnumDetail;
 							
-							
+							dialog.dismiss();						
 						} else {
 							toastMsg("加载失败"
 									+ action.getResresulttags().getDesc());
@@ -119,11 +121,7 @@ public class AvailabilityDetailActivity extends BaseActivity implements OnScroll
 					}
 				});
 	}
-	/**
-	 * 
-	 * @param invid 物料id
-	 * @param op     0 为添加 其他值为删除
-	 */
+
 	
 	
 	public void onCreate(Bundle savedInstanceState) {
@@ -136,7 +134,7 @@ public class AvailabilityDetailActivity extends BaseActivity implements OnScroll
 		// 定义一个AlertDialog.Builder对象 ，用于在绑定ImageButton
 		// detailPickDate的监听器里面生成一个日期选择器的Dialog
 		final Builder builder = new AlertDialog.Builder(this);
-
+		getInfo("","");
 		// 获取ID为et1的EditText控件er1.当做搜索栏使用
 		 
 
